@@ -11,10 +11,16 @@
   <ion-card>
     <ion-card-content>
 
-      <button ion-button (click)="takePicture()">Prendre un selfie Walah</button>
+      <button ion-button (click)="takePicture()"> <ion-icon name="add-circle" margin-right></ion-icon>Selfish</button>
 
-      <p>Vos photos:</p>
-      <img *ngFor="let img of base64Image" [src]="img" (click)="savePicture(img)" />
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+            <img *ngFor="let img of base64Image" [src]="img" (click)="savePicture(img)" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
 
     </ion-card-content>
   </ion-card>
