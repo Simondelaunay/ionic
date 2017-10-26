@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="camera">
+  <ion-card>
+    <ion-card-content>
+
+      <button ion-button (click)="takePicture()">Prendre un selfie Walah</button>
+
+      <p>Vos photos:</p>
+      <img *ngFor="let img of base64Image" [src]="img" (click)="savePicture(img)" />
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
